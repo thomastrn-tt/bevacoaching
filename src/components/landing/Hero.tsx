@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import evaPortrait from "@/assets/eva-portrait.png";
 
 const Hero = () => {
   return (
@@ -12,9 +13,24 @@ const Hero = () => {
       
       <div className="container-narrow relative z-10 text-center px-4 py-20">
         <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="mb-8"
+        >
+          <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden border-4 border-accent shadow-2xl">
+            <img 
+              src={evaPortrait} 
+              alt="Eva Boisrond" 
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-6 leading-tight">
             Eva Boisrond

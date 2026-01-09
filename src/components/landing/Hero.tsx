@@ -22,7 +22,7 @@ const Hero = () => {
             <img 
               src={evaPortrait} 
               alt="Eva Boisrond" 
-              className="w-full h-full object-cover object-center scale-125"
+              className="w-full h-full object-cover scale-125 object-[center_30%]"
             />
           </div>
         </motion.div>
